@@ -6,23 +6,24 @@
 
   <div class="form-group">
     <%= label_tag :held_on, nil, class: 'col-md-2 control-label' %>
-    
+
     <div class="col-md-6">
       <%= text_field_tag :held_on, nil, class: 'form-control' %>
+
     </div>
   </div>
 
     <div class="form-group">
     <%= label_tag :course_id, nil, class: 'col-md-2 control-label' %>
-    
+
     <div class="col-md-2">
-      
+
 <select name="course_id">
 
 
 <% @courses.each do |course| %>
 
-  <option value="<%= course.id %>"><%= course.department %> <%= course.number %> <%= course.title %></option> 
+  <option value="<%= course.id %>"><%= course.department %> <%= course.number %> <%= course.title %></option>
 <% end %>
 
 </select>
